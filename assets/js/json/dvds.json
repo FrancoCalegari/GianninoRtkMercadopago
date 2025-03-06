@@ -1,0 +1,18 @@
+[
+    {
+      "title": "Beat 1",
+      "frontCover": "./assets/img/dvds/dvd1/dvdfront.jpg",
+      "backCover": "./assets/img/dvds/dvd1/dvdback.jpg"
+    },
+    {
+      "title": "Beat 2",
+      "frontCover": "./assets/img/dvds/dvd1/dvdfront.jpg",
+      "backCover": "./assets/img/dvds/dvd2/dvdback.jpg"
+    },
+    {
+      "title": "Beat 3",
+      "frontCover": "./assets/img/dvds/dvd1/dvdfront.jpg",
+      "backCover": "./assets/img/dvds/dvd3/dvdback.jpg"
+    }
+  ]
+  

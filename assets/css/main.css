@@ -1,0 +1,324 @@
+@font-face {
+    font-family: font1;
+    src: url(../fonts/Dracutaz.ttf);
+}
+
+html{
+    scroll-behavior: smooth;
+    scrollbar-color: var(--ColorText) var(--Boxshadow);
+    scrollbar-width: thin;
+}
+
+:root {
+    --ColorText: #ffffff; /* Blanco */
+    --backgroundColorCards: #2c2c2c; /* Gris oscuro */
+    --borderColor: #44444400; /* Gris medio */
+    --Boxshadow: rgba(0, 0, 0, 0.6);
+    --lightshadow: rgba(255, 255, 255, 0.1);
+    --blur: blur(15px);
+}
+
+body {
+    color: var(--ColorText);
+    font-family: font1;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo a img {
+    height: 4rem;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 1rem;
+    margin: 0;
+}
+
+nav ul li a {
+    color: var(--ColorText);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 1.4rem;
+}
+
+nav ul li a:hover {
+    color: #bbbbbb;
+}
+
+.mainCardContainer, .librarycontainer, .serviceContainerCards, .contactContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 2rem;
+    
+}
+
+.mainCardContainer {
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 8rem;
+    flex-wrap: wrap;
+    height: 80vh;
+}
+
+.mainCardContainerImage img {
+    height: 100%;
+}
+
+.mainCardContainerText {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainCardContainerText h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.mainCardContainerText img{
+    height: 8rem;
+}
+
+
+.serviceCard {
+    background-color: var(--backgroundColorCards);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--Boxshadow);
+    text-align: center;
+    max-width: 250px;
+    transition: transform 0.3s;
+}
+
+.serviceCard:hover {
+    transform: scale(1.05);
+}
+
+.libraryCard img, .serviceCard img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    border-top: 2px solid var(--borderColor);
+}
+
+/*dvd*/
+
+.Libreria h2 {
+    text-align: left;
+}
+
+
+.librarycontainer {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.libraryCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.tbl-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Caja DVD 3D */
+.box-container {
+    position: relative;
+    width: 13rem;
+    height: 23rem;
+    perspective: 690px;
+    filter: drop-shadow(10px 10px 7px rgba(0, 0, 0, 0.3));
+    
+}
+
+.box {
+    position: ab;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: translateZ(-14px) rotateY(10deg) rotateX(5deg);
+    transition: transform 1.5s ease-in-out;
+}
+
+
+
+.tbl-cell:hover .box {
+    transform: rotateY(200deg) rotateX(-15deg) scale(1.2);
+    position: absolute;
+
+}
+
+.box div {
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    backface-visibility: visible;
+}
+
+.front {
+    width: 194px;
+    height: 345px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: solid 5px #333;
+    transform: rotateY(0deg) translateZ(14px);
+    
+}
+
+
+.back {
+    width: 194px;
+    height: 345px;
+    background-position: 0px 0px;
+    border: solid 5px #333;
+    transform: rotateY(180deg) translateZ(14px);
+}
+
+.left {
+    width: 28px;
+    height: 345px;
+    background-position: 265px 0px;
+    border: solid 5px #333;
+    transform: rotateY(-90deg) translateZ(14px);
+}
+
+.right {
+    width: 28px;
+    height: 345px;
+    transform: rotateY(90deg) translateZ(180px);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.top, .bottom {
+    width: 200px;
+    height: 28px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(14px);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(331px);
+}
+
+.buy-tag {
+    position: absolute;
+    font-family: font1;
+    font-size: 1.5rem;
+    bottom: 10px;
+    right: 10px;
+    background: linear-gradient(135deg, rgba(79, 186, 79, 0.468), rgba(34, 139, 34, 0.37));
+    backdrop-filter: blur(5px);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/*music section*/
+
+.music {
+    padding: 2rem;
+    color: var(--ColorText);
+}
+
+.musicCardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.musicCard {
+    background-color: var(--backgroundColorCards);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--Boxshadow);
+    text-align: center;
+    max-width: 250px;
+    transition: transform 0.3s;
+}
+
+.musicCard:hover {
+    transform: scale(1.05);
+}
+
+.musicCard img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.musicCard h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.5rem;
+}
+
+.musicCard p {
+    font-size: 1rem;
+    color: #bbbbbb;
+}
+
+/*overlay*/
+
+.overlayImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+    pointer-events: none;
+    transform: translateY(0%) translateX(0%);
+    object-fit: fill;
+}
+
+.overlayImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(1px);
+}
+
+.mainCardContainer {
+    position: relative;
+    z-index: -1;
+    overflow: hidden;
+}

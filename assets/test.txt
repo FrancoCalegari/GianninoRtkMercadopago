@@ -1,0 +1,107 @@
+/* Estilos generales */
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.librarycontainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: red;
+}
+
+.libraryCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.tbl-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+}
+
+/* Caja DVD 3D */
+.box-container {
+    position: relative;
+    width: 243px;
+    height: 445px;
+    perspective: 690px;
+    filter: drop-shadow(10px 10px 7px rgba(0, 0, 0, 0.3));
+    
+}
+
+.box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: translateZ(-14px) rotateY(10deg) rotateX(5deg);
+    transition: transform 2s ease-in-out;
+}
+
+.tbl-cell:hover .box {
+    transform: rotateY(200deg) rotateX(-15deg);
+}
+
+.box div {
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    backface-visibility: visible;
+}
+
+.front {
+    width: 194px;
+    height: 345px;
+    background-position: center;
+    background-image: url(../img/dvds/dvd1/dvdfront.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: solid 5px #333;
+    transform: rotateY(0deg) translateZ(14px);
+}
+
+
+.back {
+    width: 194px;
+    height: 345px;
+    background-position: 0px 0px;
+    border: solid 5px #333;
+    transform: rotateY(180deg) translateZ(14px);
+}
+
+.left {
+    width: 28px;
+    height: 345px;
+    background-position: 265px 0px;
+    border: solid 5px #333;
+    transform: rotateY(-90deg) translateZ(14px);
+}
+
+.right {
+    width: 28px;
+    height: 345px;
+    transform: rotateY(90deg) translateZ(180px);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.top, .bottom {
+    width: 200px;
+    height: 28px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(14px);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(331px);
+}

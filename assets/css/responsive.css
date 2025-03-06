@@ -1,0 +1,33 @@
+/* Responsive styles for tablets */
+@media (max-width: 768px) {
+    /* Add your tablet-specific styles here */
+    body {
+        
+    }
+}
+
+/* Responsive styles for mobile phones */
+@media (max-width: 480px) {
+    /* Add your mobile-specific styles here */
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    header {
+        justify-content: center;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content {
+        padding: 5px;
+    }
+}
