@@ -1,5 +1,8 @@
 [
     {
         "backgroundImage": "./assets/img/background1.jpg"
+    },
+    {
+        "backgroundImage": "./assets/img/background2.jpg"
     }
 ]

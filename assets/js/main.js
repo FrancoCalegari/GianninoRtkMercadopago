@@ -53,9 +53,10 @@ fetch("./assets/js/json/background.json")
         backgroundDiv.style.width = "100%";
         backgroundDiv.style.height = "100%";
         backgroundDiv.style.zIndex = "-10";
-        backgroundDiv.style.filter = "blur(15px)";
+        backgroundDiv.style.filter = "blur(50px)";
         backgroundDiv.style.transition = "background-image 0.5s ease-in-out, transform 0.5s ease-in-out";
         backgroundDiv.style.transform = "scale(1.5)";
+        backgroundDiv.style.backgroundSize = "cover";
         document.body.appendChild(backgroundDiv);
 
         function changeBackgroundImage() {

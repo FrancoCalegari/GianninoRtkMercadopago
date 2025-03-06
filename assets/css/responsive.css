@@ -4,6 +4,29 @@
     body {
         
     }
+
+    .mainCardContainer {
+        position: relative;
+    }
+
+    .overlayImage {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .mainCardContainerImage {
+        position: relative;
+        z-index: 2;
+    }
+
+    .mainCardContainerText {
+        position: relative;
+        z-index: 3;
+    }
 }
 
 /* Responsive styles for mobile phones */
@@ -29,5 +52,28 @@
 
     .content {
         padding: 5px;
+    }
+
+    .mainCardContainer {
+        position: relative;
+    }
+
+    .overlayImage {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .mainCardContainerImage {
+        position: relative;
+        z-index: 2;
+    }
+
+    .mainCardContainerText {
+        position: relative;
+        z-index: 3;
     }
 }
