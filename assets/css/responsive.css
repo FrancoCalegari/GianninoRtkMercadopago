@@ -27,6 +27,9 @@
         position: relative;
         z-index: 3;
     }
+    .gradientOverlay{
+        opacity: 0;
+    }
 }
 
 /* Responsive styles for mobile phones */
@@ -75,5 +78,8 @@
     .mainCardContainerText {
         position: relative;
         z-index: 3;
+    }
+    .gradientOverlay{
+        opacity: 0;
     }
 }
