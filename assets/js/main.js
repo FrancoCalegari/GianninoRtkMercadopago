@@ -81,3 +81,24 @@ fetch("./assets/js/json/background.json")
         changeBackgroundImage();
     })
     .catch(error => console.error("Error cargando los fondos:", error));
+
+
+    fetch("./assets/js/json/music.json")
+        .then(response => response.json())
+        .then(musicData => {
+            const musicContainer = document.querySelector(".musicCardContainer");
+            musicData.forEach(music => {
+                const musicCard = document.createElement("div");
+                musicCard.classList.add("musicCard");
+                musicCard.innerHTML = `
+                    <img src="${music.image}" alt="${music.title}" style="height: 200px;">
+                    <h3>${music.title}</h3>
+                    <div class="btnOverlayContainerLinks">
+                        <a href="${music.spotify}" target="_blank" class="btnSpotify"><i class="fa-brands fa-spotify"></i></a>
+                        <a href="${music.youtube}" target="_blank" class="btnYoutube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                `;
+                musicContainer.appendChild(musicCard);
+            });
+        })
+        .catch(error => console.error("Error cargando las music cards:", error));
