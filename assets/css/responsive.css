@@ -35,16 +35,7 @@
         height: 1px;
         background-color: var(--ColorText);
     }
-    .btnOverlayContainerLinks a {
 
-        padding: 1.8rem;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        text-decoration: none;
-        height: 3vh;
-        width: 4.5vw;
-    }
 }
 
 /* Responsive styles for mobile phones */

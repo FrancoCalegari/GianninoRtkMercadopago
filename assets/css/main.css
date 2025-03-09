@@ -408,8 +408,8 @@ footer {
     align-items: center;
     display: flex;
     text-decoration: none;
-    height: 3vh;
-    width: 3vw;
+    height: 3rem;
+    width: 3rem;
 }
 
 /* Entrance animations for icons: first slides from left, second from right */
