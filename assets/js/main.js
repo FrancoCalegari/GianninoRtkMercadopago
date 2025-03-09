@@ -37,22 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         })
         .catch(error => console.error("Error cargando los beats:", error));
-
-        document.querySelectorAll('.tbl-cell').forEach(cell => {
-            cell.addEventListener('mousemove', (e) => {
-                const box = cell.querySelector('.box');
-                const rect = cell.getBoundingClientRect();
-                const x = e.clientX - rect.left - rect.width / 2;
-                const y = e.clientY - rect.top - rect.height / 2;
-
-                box.style.transform = `translateZ(-14px) rotateY(${x / 200}deg) rotateX(${-y / -15}deg) scale(1.2) !important`;
-            });
-
-            cell.addEventListener('mouseleave', () => {
-                const box = cell.querySelector('.box');
-                box.style.transform = 'translateZ(-14px) rotateY(10deg) rotateX(5deg) scale(1)';
-            });
-        });
 });
 
 fetch("./assets/js/json/background.json")
