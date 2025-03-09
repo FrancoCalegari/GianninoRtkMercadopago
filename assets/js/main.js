@@ -32,6 +32,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 card.addEventListener("mouseleave", () => {
                     card.querySelector(".buy-tag").style.opacity = "0";
                 });
+                
+                // Al presionar el botón comprar, redirige al link del json
+                card.querySelector(".buy-tag").addEventListener("click", () => {
+                    if (beat.forwartLink) {
+                        window.location.href = beat.forwartLink;
+                    }
+                });
 
                 libraryContainer.appendChild(card);
             });
