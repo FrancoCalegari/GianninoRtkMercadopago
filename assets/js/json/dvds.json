@@ -6,13 +6,13 @@
     },
     {
       "title": "Beat 2",
-      "frontCover": "./assets/img/dvds/dvd1/dvdfront.jpg",
-      "backCover": "./assets/img/dvds/dvd2/dvdback.jpg"
+      "frontCover": "./assets/img/dvds/noneDVD/frontDVD.png",
+      "backCover": "./assets/img/dvds/noneDVD/backDVD.png"
     },
     {
       "title": "Beat 3",
-      "frontCover": "./assets/img/dvds/dvd1/dvdfront.jpg",
-      "backCover": "./assets/img/dvds/dvd3/dvdback.jpg"
+      "frontCover": "./assets/img/dvds/noneDVD/frontDVD.png",
+      "backCover": "./assets/img/dvds/noneDVD/backDVD.png"
     }
   ]
   
