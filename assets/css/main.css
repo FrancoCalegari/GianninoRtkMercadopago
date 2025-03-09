@@ -37,6 +37,7 @@ header {
     z-index: 1000;
     backdrop-filter: blur(10px);
     background: linear-gradient(to bottom, black, transparent);
+    mask-image: linear-gradient(to bottom, black 80%, transparent);
 }
 
 .logo a img {
@@ -397,6 +398,25 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    position: relative;
+    flex-direction: row;
+}
+
+.contactContainer::before,
+.contactContainer::after {
+    content: '';
+    position: absolute;
+    width: 30%;
+    height: 1px;
+    background-color: var(--ColorText);
+}
+
+.contactContainer::before {
+    left: 0;
+}
+
+.contactContainer::after {
+    right: 0;
 }
 
 .socialMediaContainer {

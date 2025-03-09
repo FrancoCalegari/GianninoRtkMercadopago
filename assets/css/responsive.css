@@ -1,10 +1,6 @@
 /* Responsive styles for tablets */
-@media (max-width: 768px) {
+@media (max-width: 834px) {
     /* Add your tablet-specific styles here */
-    body {
-        
-    }
-
     .mainCardContainer {
         position: relative;
     }
@@ -28,8 +24,18 @@
         z-index: 3;
     }
     .gradientOverlay{
-        opacity: 0;
+        visibility: 0;
     }
+    
+    .contactContainer::before,
+    .contactContainer::after {
+        content: '';
+        position: absolute;
+        width: 25%;
+        height: 1px;
+        background-color: var(--ColorText);
+    }
+    
 }
 
 /* Responsive styles for mobile phones */
@@ -59,6 +65,8 @@
 
     .mainCardContainer {
         position: relative;
+        justify-content: center;
+        align-items: center;
     }
 
     .overlayImage {
@@ -73,6 +81,7 @@
     .mainCardContainerImage {
         position: relative;
         z-index: 2;
+
     }
 
     .mainCardContainerText {
@@ -82,4 +91,10 @@
     .gradientOverlay{
         opacity: 0;
     }
+    
+    .contactContainer::before,
+    .contactContainer::after {
+        visibility: hidden;
+    }
+    
 }
