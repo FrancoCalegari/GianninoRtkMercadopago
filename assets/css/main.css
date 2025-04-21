@@ -65,8 +65,8 @@ nav ul li a:hover {
 }
 
 #home {
-    mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
-	-webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 77%, transparent 100%);
+	-webkit-mask-image: linear-gradient(to bottom, black 77%, transparent 100%);
 }
 
 .mainCardContainer, .librarycontainer, .contactContainer {
