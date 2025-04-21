@@ -64,6 +64,11 @@ nav ul li a:hover {
     color: #bbbbbb;
 }
 
+#home {
+    mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+	-webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+}
+
 .mainCardContainer, .librarycontainer, .contactContainer {
     display: flex;
     flex-wrap: wrap;
@@ -96,8 +101,7 @@ nav ul li a:hover {
 
 .mainCardContainerImage img {
     height: 100%;
-    mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
-	-webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+
 }
 
 .mainCardContainerText {
